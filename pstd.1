@@ -1,18 +1,18 @@
-<html><head><title>pstd(1) - command line pastebin</title></head><body><pre>
-<b>pstd(1)</b>                                 <b>PSTD</b> v0.0.2                                 <b>pstd(1)</b>
+<html><head><title>cstd(1) - command line pastebin</title></head><body><pre>
+<b>cstd(1)</b>                                 <b>CSTD</b> v0.0.2                                 <b>cstd(1)</b>
 
 <b>NAME</b>
-    pstd: another command line pastebin.
+    cstd: another command line pastebin.
 
 <b>SYNOPSIS</b>
     Installation (optional):
-      # wget -O /usr/local/bin/pstd <a href="http://MYHOST/0">http://MYHOST/0</a> &amp;&amp; chmod +x /usr/local/bin/pstd
+      # wget -O /usr/local/bin/cstd <a href="http://MYHOST/0">http://MYHOST/0</a> &amp;&amp; chmod +x /usr/local/bin/cstd
         (You can also skip installing this and use wget directly, see below)
 
     <b>Use:</b>
-      $ &lt;command&gt; | pstd
+      $ &lt;command&gt; | cstd
     <b>Or:</b>
-      $ pstd &lt;file&gt;
+      $ cstd &lt;file&gt;
     <b>Or</b> if you don't feel like using the paste script:
       $ wget -q -O - --post-file &lt;file&gt; http://MYHOST/
 
@@ -24,12 +24,13 @@
       request syntax hilighting for language &lt;lang&gt;, if supported.
 
 <b>EXAMPLES</b>
-    $ cat /etc/passwd | pstd
-    $ pstd -s other.pstd.site.com &lt; /etc/passwd
+    $ cat /etc/passwd | cstd
+    $ cstd -s other.cstd.site.com &lt; /etc/passwd
     $ wget -q -O - --post-file /etc/passwd http://MYHOST/
-      (wget does not support POSTing stdin, so <a href="http://MYHOST/0">the pstd script</a> is recommended)
+      (wget does not support POSTing stdin, so <a href="http://MYHOST/0">the cstd script</a> is recommended)
 
 <b>SEE ALSO</b>
+    cstd is just a rebrand of pstd check it out:
     <a href="http://github.com/fstd/pstd">http://github.com/fstd/pstd</a> (source repository)
     <a href="https://raw.githubusercontent.com/fstd/pstd/devel/README">README</a>
 
@@ -38,7 +39,8 @@
     (<a href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a>)
 
 <b>AUTHOR</b>
-    2015, Timo Buhrmester &lt;van.fstd+pstd@gmail.com&gt;
+    2015, Timo Buhrmester &lt;van.fstd+cstd@gmail.com&gt; ( cstd )
+    2019, Chiller Dragon &lt;chillerdragon+cstd@gmail.com&gt; ( cstd rebrand )
 
 
                                        <i>May 17, 2015</i>
