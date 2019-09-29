@@ -15,8 +15,8 @@ $ sudo chmod 100 /etc/authbind/byport/80
 # execute permissions on the file /etc/authbind/byport/<theport>)
 
 # Site setup:
-$ git clone https://github.com/fstd/pstd.git
-$ cd pstd
+$ git clone https://github.com/ChillerDragon/cstd.git
+$ cd cstd
 $ mkdir pastes
 # Then depending on whether or not authbind was used, one of the following:
 $ ./pstd_server.pl -l 0.0.0.0:8080 -H example.com:8080  #without authbind
@@ -111,7 +111,8 @@ Todo
 
 Author + License
 ----------------
-(C) 2015, Timo Buhrmester
+(C) 2015, Timo Buhrmester (pstd)
+(C) 2019, Chiller Dragon (cstd - just rebrand lol)
 
 pstd is licensed under a 2-clause BSD license, without any warranty, but with
 best wishes and in the hope it will be useful (also see the LICENSE file).
