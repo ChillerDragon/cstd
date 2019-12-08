@@ -447,12 +447,15 @@ sub handle_clt
 	D "$who: Handling";
 
 	my $data = '';
-	$clt->recv($data, 1024); # XXX can this fail?!
+	my $recv_ok = $clt->recv($data, 1024); # XXX can this fail?!
+	#                                         yes it seems to break the next send
 
 	# I suppose empty data means EOF, but not quite sure. XXX
 	if ($data eq '') {
-		W "$who: Empty read";
-		respond($clt, "text/plain", "ERROR: You what?\n");
+		W "$who: Empty read recv='$recv_ok'";
+		if ($recv_ok eq '') {
+			respond($clt, "text/plain", "ERROR: You what?\n");
+		}
 		return 0;
 	}
 
