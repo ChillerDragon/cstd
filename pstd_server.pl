@@ -442,6 +442,12 @@ sub handle_clt
 {
 	my ($clt) = @_;
 	my $who = $clt->peerhost();
+
+	if (not defined $who || $who eq '') {
+		W "'\$who' is empty!";
+		return 0;
+	}
+
 	my $whoipp = $who.":".$clt->peerport();
 
 	D "$who: Handling";
