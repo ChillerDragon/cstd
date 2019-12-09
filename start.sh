@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p pastes
 if [ "$1" == "dev" ]
 then
     ./pstd_server.pl -l localhost:8080 -H localhost:8080
