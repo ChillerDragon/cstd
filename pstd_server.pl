@@ -458,8 +458,10 @@ sub handle_clt
 
 	# I suppose empty data means EOF, but not quite sure. XXX
 	if ($data eq '') {
-		W "$who: Empty read recv='$recv_ok'";
 		if ($recv_ok eq '') {
+			W "$who: Empty read and empty recv";
+		} else {
+			W "$who: Empty read recv='$recv_ok'";
 			respond($clt, "text/plain", "ERROR: You what?\n");
 		}
 		return 0;
