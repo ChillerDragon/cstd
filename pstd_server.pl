@@ -331,7 +331,7 @@ sub process_GET
 # Deal with something (most likely paste.sh or wget) submitting
 # a paste.  We don't support much HTTP, so this may not work
 # with arbitrary clients. (We require a Content-Length header,
-# and no transfer-encoding.  wget --post-file http://.. is okay.
+# and no transfer-encoding.  wget --post-file https://.. is okay.
 sub process_POST
 {
 	my ($key, $clt) = @_;
@@ -390,7 +390,7 @@ sub process_POST
 	D "$who: Pasted $id";
 	L "$who: Pasted $id";
 
-	my $url = "http://$myhost/$id";
+	my $url = "https://$myhost/$id";
 	if ($key ne '') {
 		$url .= "/$key"
 	}
@@ -690,7 +690,7 @@ if (defined $opts{y}) {
 	}
 }
 
-D "Will listen on $bindaddr:$bindport; accessible as http://$myhost/";
+D "Will listen on $bindaddr:$bindport; accessible as https://$myhost/";
 
 # Generate paste '0' because it contains the client script we advertise in the man page
 `sed "s/^site=.*\$/site='$myhost'/" $cltscript | $compr >$pastedir/0`;
