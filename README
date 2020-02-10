@@ -5,7 +5,7 @@ pstd (pasted) - command line pastebin (version 0.0.2)
 Quickstart for running a pstd paste site
 ----------------------------------------
 (To be documented in detail later, but as a quick example, this is how
-http://paste.pr0.tips/ is run (referring to it as example.com henceforth)
+https://paste.zillyhuhn.com/ is run (referring to it as example.com henceforth)
 
 # Optional: authbind setup (assuming it is installed)
 $ sudo touch /etc/authbind/byport/80
