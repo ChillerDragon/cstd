@@ -60,7 +60,7 @@ shift $((OPTIND-1))
 
 if $dl; then
 	[ $# -gt 0 ] || Bomb "No paste identifier given"
-	wget -q -O - "http://$site/$1" >"$tmpout" || Bomb "wget failed :O"
+	wget -q -O - "https://$site/$1" >"$tmpout" || Bomb "wget failed :O"
 
 else
 	# Warn about superfluous argumnents
@@ -77,7 +77,7 @@ else
 	fi
 
 	# Paste what $in refers to
-	wget -q -O - --post-file "$in" "http://$site/$key" >"$tmpout" || Bomb "wget failed :O"
+	wget -q -O - --post-file "$in" "https://$site/$key" >"$tmpout" || Bomb "wget failed :O"
 fi
 
 # And output the returned link (or error)
