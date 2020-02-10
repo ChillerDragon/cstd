@@ -6,7 +6,7 @@
 
 <b>SYNOPSIS</b>
     Installation (optional):
-      # wget -O /usr/local/bin/cstd <a href="http://MYHOST/0">http://MYHOST/0</a> &amp;&amp; chmod +x /usr/local/bin/cstd
+      # wget -O /usr/local/bin/cstd <a href="https://MYHOST/0">https://MYHOST/0</a> &amp;&amp; chmod +x /usr/local/bin/cstd
         (You can also skip installing this and use wget directly, see below)
 
     <b>Use:</b>
@@ -14,7 +14,7 @@
     <b>Or:</b>
       $ cstd &lt;file&gt;
     <b>Or</b> if you don't feel like using the paste script:
-      $ wget -q -O - --post-file &lt;file&gt; http://MYHOST/
+      $ wget -q -O - --post-file &lt;file&gt; https://MYHOST/
 
 <b>DESCRIPTION</b>
     pstd (pasted) is yet another command-line pastebin similar to and
@@ -26,17 +26,17 @@
 <b>EXAMPLES</b>
     $ cat /etc/passwd | cstd
     $ cstd -s other.cstd.site.com &lt; /etc/passwd
-    $ wget -q -O - --post-file /etc/passwd http://MYHOST/
-      (wget does not support POSTing stdin, so <a href="http://MYHOST/0">the cstd script</a> is recommended)
+    $ wget -q -O - --post-file /etc/passwd https://MYHOST/
+      (wget does not support POSTing stdin, so <a href="https://MYHOST/0">the cstd script</a> is recommended)
 
 <b>SEE ALSO</b>
     cstd is just a rebrand of pstd check it out:
-    <a href="http://github.com/fstd/pstd">http://github.com/fstd/pstd</a> (source repository)
+    <a href="https://github.com/fstd/pstd">https://github.com/fstd/pstd</a> (source repository)
     <a href="https://raw.githubusercontent.com/fstd/pstd/devel/README">README</a>
 
 <b>CREDITS</b>
     Lots of inspiration (but no code) taken from <a href="http://sprunge.us">http://sprunge.us</a>
-    (<a href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a>)
+    (<a href="https://github.com/rupa/sprunge">https://github.com/rupa/sprunge</a>)
 
 <b>AUTHOR</b>
     2015, Timo Buhrmester &lt;van.fstd+pstd@gmail.com&gt; ( pstd )
