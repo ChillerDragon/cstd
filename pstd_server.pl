@@ -423,7 +423,7 @@ sub process_dispatch
 			W "$who: Request not understood";
 			$resp = "ERROR: Request not understood\n";
 		}
-	} elsif ($readbuf{$whoipp} =~ /^GET \/([a-zA-Z0-9]+)(?:\/([a-zA-Z0-9]{16}))?\b(?:\?([a-z]+))?\b/) {
+	} elsif ($readbuf{$whoipp} =~ /^GET \/([a-zA-Z0-9_]+)(?:\/([a-zA-Z0-9]{16}))?\b(?:\?([a-z]+))?\b/) {
 		$resp=process_GET($clt, $1, $3, $2);
 	} elsif ($readbuf{$whoipp} =~ /^GET \/ /) {
 		$resp=manpage;
@@ -474,7 +474,7 @@ sub handle_clt
 	if (!length $readbuf{$whoipp}) {
 		if ($data =~ /^POST \//) {
 			$datalen{$whoipp} = -1; #don't know yet
-		} elsif ($data =~ /^GET \/([a-zA-Z0-9]+(?:\/([0-9a-zA-Z]{16}))?(?:\?([a-z]+))?)? HTTP/) {
+		} elsif ($data =~ /^GET \/([a-zA-Z0-9_]+(?:\/([0-9a-zA-Z]{16}))?(?:\?([a-z]+))?)? HTTP/) {
 			$datalen{$whoipp} = 0; #don't care
 		} else {
 			W "$who: Bad first data chunk '$data'";
