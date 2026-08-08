@@ -2,7 +2,7 @@
 
 log() {
         local ts="$(date '+%F_%H-%M')"
-        printf '[%s][*] %s\n' "$ts" "$1" | tee -a ~/start_pstd.log
+        printf '[%s][*] %s\n' "$ts" "$1"
 }
 
 log "starting pstd ..."
